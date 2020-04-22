@@ -1,0 +1,150 @@
+*
+{
+  margin:0;
+  padding:0;
+}
+body
+{
+  position:relative;
+  display:grid;
+  grid-template-rows:repeat(4,auto);
+  grid-template-columns: repeat(auto-fit,minmax(10vw,auto));
+  grid-template-areas: 
+  "headp headp headp"
+  "bodies bodies bodies"
+  "menus menus menus"
+  "footers footers footers"
+  ;
+}
+.headpanel
+{
+  position: relative;
+  display:grid;
+  grid-area:headp;
+  max-width: 100%;
+  height:20vmin;
+  grid-template-columns:repeat(1,auto minmax(18vw,20vw) 2fr);
+  grid-template-rows: auto;
+  align-items:center;
+  background-color:black;
+  grid-template-areas: 
+  "logo headers hamm";
+  border-bottom: white 2px solid;
+  border-top: white 2px solid;
+}
+.logo
+{
+  position: relative;
+  display: flex;
+  grid-area:logo ;
+  float:left;
+  height:100%;
+  width:auto;
+  margin-left:5px;
+  margin-right:5px;
+  justify-self: start;
+  
+}
+.logo img
+{
+  width:17vmin;
+  height:17vmin;
+  border-radius:50%;
+  margin:auto;
+}
+header
+{
+  position: relative;
+  grid-area:headers ;
+  display:flex;
+  float:left;
+  margin:auto;
+  height:100%;
+  width:auto;
+  justify-self: start;
+  text-align: left;
+}
+header h1
+{
+ font-size: 5vmin;
+ margin:auto
+}
+header h1 a
+{
+  text-decoration:none;
+  color:white;
+  line-height:6vmin;
+}
+.hamburger
+{
+  position:relative;
+  grid-area:hamm;
+  justify-self: flex-end;
+  margin-auto;
+  font-size: 7vmin;
+}
+.hamburger a 
+{
+  color:white;
+  text-decoration: none;
+}
+#toggle
+{
+  display:none;
+}
+.toggler
+{ 
+  margin-right:10px;
+  color:white;
+  cursor: pointer;
+}
+.menuwrap
+{
+  position:relative; 
+  grid-area: menus;
+  text-align: center;
+  width:80%;
+  height:80vmin;
+  justify-self: center;
+  background-color: black ;
+  opacity: 0.75;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+}
+.menuwrap ul
+{
+  position:relative;
+  
+  
+}
+.menuwrap ul li
+{
+ list-style: none;
+ color:white;
+}
+.menuwrap ul li a
+{
+  text-decoration: none;
+  color:white;
+  font-size: 6vmin;
+  line-height: 13vmin;
+}
+.bodi
+{
+  grid-area: bodies;
+  position:relative;
+  background-image: url("resources/img/joystick_controller_gamepad_126439_1440x2560.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity:0.75;
+}
+.bodi h1
+{
+  position: relative;
+  z-index:-1;
+}
+footer
+{
+  grid-area:footers;
+}
